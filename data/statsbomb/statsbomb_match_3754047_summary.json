@@ -1,0 +1,759 @@
+{
+  "rows": 3780,
+  "unique_teams": 2,
+  "unique_players": 28,
+  "location_missing": 54,
+  "x_range": [
+    1.0,
+    120.0
+  ],
+  "y_range": [
+    0.1,
+    80.0
+  ],
+  "top_event_types": {
+    "Pass": 1082,
+    "Ball Receipt*": 1007,
+    "Carry": 859,
+    "Pressure": 270,
+    "Ball Recovery": 111,
+    "Duel": 87,
+    "Clearance": 59,
+    "Block": 50,
+    "Dispossessed": 43,
+    "Miscontrol": 34
+  },
+  "sample_events": [
+    {
+      "bad_behaviour_card": NaN,
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_offensive": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "block_deflection": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_nutmeg": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_committed_penalty": NaN,
+      "foul_committed_type": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "6ff91d07-3df7-42b6-abf5-2cdaee653922",
+      "index": 1,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754047,
+      "minute": 0,
+      "miscontrol_aerial_won": NaN,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_deflected": NaN,
+      "pass_end_location": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_no_touch": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_straight": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_through_ball": NaN,
+      "pass_type": NaN,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 1,
+      "possession_team": "Liverpool",
+      "possession_team_id": 24,
+      "related_events": NaN,
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_one_on_one": NaN,
+      "shot_outcome": NaN,
+      "shot_redirect": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": {
+        "formation": 433,
+        "lineup": [
+          {
+            "player": {
+              "id": 3539,
+              "name": "Simon Mignolet"
+            },
+            "position": {
+              "id": 1,
+              "name": "Goalkeeper"
+            },
+            "jersey_number": 22
+          },
+          {
+            "player": {
+              "id": 4590,
+              "name": "Nathaniel Edwin Clyne"
+            },
+            "position": {
+              "id": 2,
+              "name": "Right Back"
+            },
+            "jersey_number": 2
+          },
+          {
+            "player": {
+              "id": 18872,
+              "name": "Martin \u0160krtel"
+            },
+            "position": {
+              "id": 3,
+              "name": "Right Center Back"
+            },
+            "jersey_number": 37
+          },
+          {
+            "player": {
+              "id": 3471,
+              "name": "Dejan Lovren"
+            },
+            "position": {
+              "id": 5,
+              "name": "Left Center Back"
+            },
+            "jersey_number": 6
+          },
+          {
+            "player": {
+              "id": 3515,
+              "name": "Alberto Moreno P\u00e9rez"
+            },
+            "position": {
+              "id": 6,
+              "name": "Left Back"
+            },
+            "jersey_number": 18
+          },
+          {
+            "player": {
+              "id": 3493,
+              "name": "Emre Can"
+            },
+            "position": {
+              "id": 10,
+              "name": "Center Defensive Midfield"
+            },
+            "jersey_number": 23
+          },
+          {
+            "player": {
+              "id": 3473,
+              "name": "James Philip Milner"
+            },
+            "position": {
+              "id": 13,
+              "name": "Right Center Midfield"
+            },
+            "jersey_number": 7
+          },
+          {
+            "player": {
+              "id": 4090,
+              "name": "Adam David Lallana"
+            },
+            "position": {
+              "id": 15,
+              "name": "Left Center Midfield"
+            },
+            "jersey_number": 20
+          },
+          {
+            "player": {
+              "id": 3635,
+              "name": "Jordon Ibe"
+            },
+            "position": {
+              "id": 17,
+              "name": "Right Wing"
+            },
+            "jersey_number": 33
+          },
+          {
+            "player": {
+              "id": 3535,
+              "name": "Roberto Firmino Barbosa de Oliveira"
+            },
+            "position": {
+              "id": 21,
+              "name": "Left Wing"
+            },
+            "jersey_number": 11
+          },
+          {
+            "player": {
+              "id": 3380,
+              "name": "Christian Benteke Liolo"
+            },
+            "position": {
+              "id": 23,
+              "name": "Center Forward"
+            },
+            "jersey_number": 9
+          }
+        ]
+      },
+      "team": "Liverpool",
+      "team_id": 24,
+      "timestamp": "00:00:00.000",
+      "type": "Starting XI",
+      "under_pressure": NaN
+    },
+    {
+      "bad_behaviour_card": NaN,
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_offensive": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "block_deflection": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_nutmeg": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_committed_penalty": NaN,
+      "foul_committed_type": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "e34bfa03-3377-4d94-9e0f-379bef12365e",
+      "index": 2,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754047,
+      "minute": 0,
+      "miscontrol_aerial_won": NaN,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_deflected": NaN,
+      "pass_end_location": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_no_touch": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_straight": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_through_ball": NaN,
+      "pass_type": NaN,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 1,
+      "possession_team": "Liverpool",
+      "possession_team_id": 24,
+      "related_events": NaN,
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_one_on_one": NaN,
+      "shot_outcome": NaN,
+      "shot_redirect": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": {
+        "formation": 4411,
+        "lineup": [
+          {
+            "player": {
+              "id": 3262,
+              "name": "\u0141ukasz Fabia\u0144ski"
+            },
+            "position": {
+              "id": 1,
+              "name": "Goalkeeper"
+            },
+            "jersey_number": 1
+          },
+          {
+            "player": {
+              "id": 3340,
+              "name": "Kyle Naughton"
+            },
+            "position": {
+              "id": 2,
+              "name": "Right Back"
+            },
+            "jersey_number": 26
+          },
+          {
+            "player": {
+              "id": 4726,
+              "name": "Kyle Bartley"
+            },
+            "position": {
+              "id": 3,
+              "name": "Right Center Back"
+            },
+            "jersey_number": 27
+          },
+          {
+            "player": {
+              "id": 3644,
+              "name": "Ashley Williams"
+            },
+            "position": {
+              "id": 5,
+              "name": "Left Center Back"
+            },
+            "jersey_number": 6
+          },
+          {
+            "player": {
+              "id": 9627,
+              "name": "Neil Taylor"
+            },
+            "position": {
+              "id": 6,
+              "name": "Left Back"
+            },
+            "jersey_number": 3
+          },
+          {
+            "player": {
+              "id": 4631,
+              "name": "Leon Britton"
+            },
+            "position": {
+              "id": 11,
+              "name": "Left Defensive Midfield"
+            },
+            "jersey_number": 7
+          },
+          {
+            "player": {
+              "id": 3449,
+              "name": "Wayne Routledge"
+            },
+            "position": {
+              "id": 12,
+              "name": "Right Midfield"
+            },
+            "jersey_number": 15
+          },
+          {
+            "player": {
+              "id": 3944,
+              "name": "Gylfi \u00de\u00f3r Sigur\u00f0sson"
+            },
+            "position": {
+              "id": 13,
+              "name": "Right Center Midfield"
+            },
+            "jersey_number": 23
+          },
+          {
+            "player": {
+              "id": 3605,
+              "name": "Sung-Yeung Ki"
+            },
+            "position": {
+              "id": 15,
+              "name": "Left Center Midfield"
+            },
+            "jersey_number": 4
+          },
+          {
+            "player": {
+              "id": 3347,
+              "name": "Andr\u00e9 Ayew Pel\u00e9"
+            },
+            "position": {
+              "id": 16,
+              "name": "Left Midfield"
+            },
+            "jersey_number": 10
+          },
+          {
+            "player": {
+              "id": 15996,
+              "name": "\u00c9derzito Ant\u00f3nio Macedo Lopes"
+            },
+            "position": {
+              "id": 23,
+              "name": "Center Forward"
+            },
+            "jersey_number": 17
+          }
+        ]
+      },
+      "team": "Swansea City",
+      "team_id": 26,
+      "timestamp": "00:00:00.000",
+      "type": "Starting XI",
+      "under_pressure": NaN
+    },
+    {
+      "bad_behaviour_card": NaN,
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_offensive": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "block_deflection": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_nutmeg": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_committed_penalty": NaN,
+      "foul_committed_type": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "d34d34aa-7cc8-40b3-b572-74b3119fe2fd",
+      "index": 3,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754047,
+      "minute": 0,
+      "miscontrol_aerial_won": NaN,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_deflected": NaN,
+      "pass_end_location": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_no_touch": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_straight": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_through_ball": NaN,
+      "pass_type": NaN,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 1,
+      "possession_team": "Liverpool",
+      "possession_team_id": 24,
+      "related_events": [
+        "6e5ef022-65c8-4b4b-8029-8a7888eeacd4"
+      ],
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_one_on_one": NaN,
+      "shot_outcome": NaN,
+      "shot_redirect": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": NaN,
+      "team": "Liverpool",
+      "team_id": 24,
+      "timestamp": "00:00:00.000",
+      "type": "Half Start",
+      "under_pressure": NaN
+    },
+    {
+      "bad_behaviour_card": NaN,
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_offensive": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "block_deflection": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_nutmeg": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_committed_penalty": NaN,
+      "foul_committed_type": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "6e5ef022-65c8-4b4b-8029-8a7888eeacd4",
+      "index": 4,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754047,
+      "minute": 0,
+      "miscontrol_aerial_won": NaN,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_deflected": NaN,
+      "pass_end_location": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_no_touch": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_straight": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_through_ball": NaN,
+      "pass_type": NaN,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 1,
+      "possession_team": "Liverpool",
+      "possession_team_id": 24,
+      "related_events": [
+        "d34d34aa-7cc8-40b3-b572-74b3119fe2fd"
+      ],
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_one_on_one": NaN,
+      "shot_outcome": NaN,
+      "shot_redirect": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": NaN,
+      "team": "Swansea City",
+      "team_id": 26,
+      "timestamp": "00:00:00.000",
+      "type": "Half Start",
+      "under_pressure": NaN
+    },
+    {
+      "bad_behaviour_card": NaN,
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_offensive": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "block_deflection": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_nutmeg": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_committed_penalty": NaN,
+      "foul_committed_type": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "10f3e7fe-5a0d-44c3-a234-327789debdb0",
+      "index": 2034,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754047,
+      "minute": 45,
+      "miscontrol_aerial_won": NaN,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_deflected": NaN,
+      "pass_end_location": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_no_touch": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_straight": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_through_ball": NaN,
+      "pass_type": NaN,
+      "period": 2,
+      "play_pattern": "From Goal Kick",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 95,
+      "possession_team": "Liverpool",
+      "possession_team_id": 24,
+      "related_events": [
+        "c8628dd2-bbb4-4e85-821c-b0ec3a33fcbd"
+      ],
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_one_on_one": NaN,
+      "shot_outcome": NaN,
+      "shot_redirect": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": NaN,
+      "team": "Liverpool",
+      "team_id": 24,
+      "timestamp": "00:00:00.000",
+      "type": "Half Start",
+      "under_pressure": NaN
+    }
+  ]
+}

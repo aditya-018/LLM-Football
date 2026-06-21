@@ -1,0 +1,759 @@
+{
+  "rows": 3264,
+  "unique_teams": 2,
+  "unique_players": 28,
+  "location_missing": 44,
+  "x_range": [
+    0.8,
+    120.0
+  ],
+  "y_range": [
+    0.1,
+    80.0
+  ],
+  "top_event_types": {
+    "Pass": 917,
+    "Ball Receipt*": 844,
+    "Carry": 601,
+    "Pressure": 360,
+    "Duel": 94,
+    "Ball Recovery": 93,
+    "Block": 51,
+    "Interception": 47,
+    "Clearance": 40,
+    "Goal Keeper": 31
+  },
+  "sample_events": [
+    {
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "block_deflection": NaN,
+      "block_offensive": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_other": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_committed_offensive": NaN,
+      "foul_committed_type": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "3942540f-5242-4a95-af6f-cf54e7049298",
+      "index": 1,
+      "injury_stoppage_in_chain": NaN,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754049,
+      "minute": 0,
+      "miscontrol_aerial_won": NaN,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_deflected": NaN,
+      "pass_end_location": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_miscommunication": NaN,
+      "pass_no_touch": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_through_ball": NaN,
+      "pass_type": NaN,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 1,
+      "possession_team": "Leicester City",
+      "possession_team_id": 22,
+      "related_events": NaN,
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_open_goal": NaN,
+      "shot_outcome": NaN,
+      "shot_redirect": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": {
+        "formation": 442,
+        "lineup": [
+          {
+            "player": {
+              "id": 3815,
+              "name": "Kasper Schmeichel"
+            },
+            "position": {
+              "id": 1,
+              "name": "Goalkeeper"
+            },
+            "jersey_number": 1
+          },
+          {
+            "player": {
+              "id": 3709,
+              "name": "Daniel Amartey"
+            },
+            "position": {
+              "id": 2,
+              "name": "Right Back"
+            },
+            "jersey_number": 13
+          },
+          {
+            "player": {
+              "id": 3813,
+              "name": "Wes Morgan"
+            },
+            "position": {
+              "id": 3,
+              "name": "Right Center Back"
+            },
+            "jersey_number": 5
+          },
+          {
+            "player": {
+              "id": 40123,
+              "name": "Robert Huth"
+            },
+            "position": {
+              "id": 5,
+              "name": "Left Center Back"
+            },
+            "jersey_number": 6
+          },
+          {
+            "player": {
+              "id": 3812,
+              "name": "Christian Fuchs"
+            },
+            "position": {
+              "id": 6,
+              "name": "Left Back"
+            },
+            "jersey_number": 28
+          },
+          {
+            "player": {
+              "id": 3662,
+              "name": "Danny Drinkwater"
+            },
+            "position": {
+              "id": 9,
+              "name": "Right Defensive Midfield"
+            },
+            "jersey_number": 4
+          },
+          {
+            "player": {
+              "id": 3961,
+              "name": "N''Golo Kant\u00e9"
+            },
+            "position": {
+              "id": 11,
+              "name": "Left Defensive Midfield"
+            },
+            "jersey_number": 14
+          },
+          {
+            "player": {
+              "id": 3814,
+              "name": "Riyad Mahrez"
+            },
+            "position": {
+              "id": 12,
+              "name": "Right Midfield"
+            },
+            "jersey_number": 26
+          },
+          {
+            "player": {
+              "id": 3307,
+              "name": "Marc Albrighton"
+            },
+            "position": {
+              "id": 16,
+              "name": "Left Midfield"
+            },
+            "jersey_number": 11
+          },
+          {
+            "player": {
+              "id": 3810,
+              "name": "Shinji Okazaki"
+            },
+            "position": {
+              "id": 22,
+              "name": "Right Center Forward"
+            },
+            "jersey_number": 20
+          },
+          {
+            "player": {
+              "id": 10960,
+              "name": "Jamie Vardy"
+            },
+            "position": {
+              "id": 24,
+              "name": "Left Center Forward"
+            },
+            "jersey_number": 9
+          }
+        ]
+      },
+      "team": "Leicester City",
+      "team_id": 22,
+      "timestamp": "00:00:00.000",
+      "type": "Starting XI",
+      "under_pressure": NaN
+    },
+    {
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "block_deflection": NaN,
+      "block_offensive": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_other": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_committed_offensive": NaN,
+      "foul_committed_type": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "f84c5bc0-302c-4cae-95fc-b699f17c2924",
+      "index": 2,
+      "injury_stoppage_in_chain": NaN,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754049,
+      "minute": 0,
+      "miscontrol_aerial_won": NaN,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_deflected": NaN,
+      "pass_end_location": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_miscommunication": NaN,
+      "pass_no_touch": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_through_ball": NaN,
+      "pass_type": NaN,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 1,
+      "possession_team": "Leicester City",
+      "possession_team_id": 22,
+      "related_events": NaN,
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_open_goal": NaN,
+      "shot_outcome": NaN,
+      "shot_redirect": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": {
+        "formation": 343,
+        "lineup": [
+          {
+            "player": {
+              "id": 23635,
+              "name": "John Ruddy"
+            },
+            "position": {
+              "id": 1,
+              "name": "Goalkeeper"
+            },
+            "jersey_number": 1
+          },
+          {
+            "player": {
+              "id": 9930,
+              "name": "Ryan Bennett"
+            },
+            "position": {
+              "id": 3,
+              "name": "Right Center Back"
+            },
+            "jersey_number": 24
+          },
+          {
+            "player": {
+              "id": 21212,
+              "name": "Russell Martin"
+            },
+            "position": {
+              "id": 4,
+              "name": "Center Back"
+            },
+            "jersey_number": 5
+          },
+          {
+            "player": {
+              "id": 9461,
+              "name": "Timm Klose"
+            },
+            "position": {
+              "id": 5,
+              "name": "Left Center Back"
+            },
+            "jersey_number": 17
+          },
+          {
+            "player": {
+              "id": 10499,
+              "name": "Ivo Daniel Ferreira Mendonca Pinto"
+            },
+            "position": {
+              "id": 7,
+              "name": "Right Wing Back"
+            },
+            "jersey_number": 25
+          },
+          {
+            "player": {
+              "id": 10967,
+              "name": "Robert Brady"
+            },
+            "position": {
+              "id": 8,
+              "name": "Left Wing Back"
+            },
+            "jersey_number": 12
+          },
+          {
+            "player": {
+              "id": 9463,
+              "name": "Alexander Banor Tettey"
+            },
+            "position": {
+              "id": 13,
+              "name": "Right Center Midfield"
+            },
+            "jersey_number": 27
+          },
+          {
+            "player": {
+              "id": 9578,
+              "name": "Jonathan Howson"
+            },
+            "position": {
+              "id": 15,
+              "name": "Left Center Midfield"
+            },
+            "jersey_number": 8
+          },
+          {
+            "player": {
+              "id": 3286,
+              "name": "Nathan Redmond"
+            },
+            "position": {
+              "id": 17,
+              "name": "Right Wing"
+            },
+            "jersey_number": 22
+          },
+          {
+            "player": {
+              "id": 9528,
+              "name": "Steven Naismith"
+            },
+            "position": {
+              "id": 21,
+              "name": "Left Wing"
+            },
+            "jersey_number": 7
+          },
+          {
+            "player": {
+              "id": 4807,
+              "name": "Cameron Jerome"
+            },
+            "position": {
+              "id": 23,
+              "name": "Center Forward"
+            },
+            "jersey_number": 10
+          }
+        ]
+      },
+      "team": "Norwich City",
+      "team_id": 56,
+      "timestamp": "00:00:00.000",
+      "type": "Starting XI",
+      "under_pressure": NaN
+    },
+    {
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "block_deflection": NaN,
+      "block_offensive": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_other": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_committed_offensive": NaN,
+      "foul_committed_type": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "6664837b-c3f0-468c-95f4-c694d55def4b",
+      "index": 3,
+      "injury_stoppage_in_chain": NaN,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754049,
+      "minute": 0,
+      "miscontrol_aerial_won": NaN,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_deflected": NaN,
+      "pass_end_location": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_miscommunication": NaN,
+      "pass_no_touch": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_through_ball": NaN,
+      "pass_type": NaN,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 1,
+      "possession_team": "Leicester City",
+      "possession_team_id": 22,
+      "related_events": [
+        "88963b7d-7c2c-4350-a64d-83191818e11d"
+      ],
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_open_goal": NaN,
+      "shot_outcome": NaN,
+      "shot_redirect": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": NaN,
+      "team": "Leicester City",
+      "team_id": 22,
+      "timestamp": "00:00:00.000",
+      "type": "Half Start",
+      "under_pressure": NaN
+    },
+    {
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "block_deflection": NaN,
+      "block_offensive": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_other": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_committed_offensive": NaN,
+      "foul_committed_type": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "88963b7d-7c2c-4350-a64d-83191818e11d",
+      "index": 4,
+      "injury_stoppage_in_chain": NaN,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754049,
+      "minute": 0,
+      "miscontrol_aerial_won": NaN,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_deflected": NaN,
+      "pass_end_location": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_miscommunication": NaN,
+      "pass_no_touch": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_through_ball": NaN,
+      "pass_type": NaN,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 1,
+      "possession_team": "Leicester City",
+      "possession_team_id": 22,
+      "related_events": [
+        "6664837b-c3f0-468c-95f4-c694d55def4b"
+      ],
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_open_goal": NaN,
+      "shot_outcome": NaN,
+      "shot_redirect": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": NaN,
+      "team": "Norwich City",
+      "team_id": 56,
+      "timestamp": "00:00:00.000",
+      "type": "Half Start",
+      "under_pressure": NaN
+    },
+    {
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "block_deflection": NaN,
+      "block_offensive": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_other": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_committed_offensive": NaN,
+      "foul_committed_type": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "dd3364dc-891b-428d-a8e5-4c3cd6a5df0b",
+      "index": 1649,
+      "injury_stoppage_in_chain": NaN,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754049,
+      "minute": 45,
+      "miscontrol_aerial_won": NaN,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_deflected": NaN,
+      "pass_end_location": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_miscommunication": NaN,
+      "pass_no_touch": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_through_ball": NaN,
+      "pass_type": NaN,
+      "period": 2,
+      "play_pattern": "Regular Play",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 84,
+      "possession_team": "Norwich City",
+      "possession_team_id": 56,
+      "related_events": [
+        "22aaa1b2-8c58-40e7-bb5d-c4c7464e65d1"
+      ],
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_open_goal": NaN,
+      "shot_outcome": NaN,
+      "shot_redirect": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": NaN,
+      "team": "Norwich City",
+      "team_id": 56,
+      "timestamp": "00:00:00.000",
+      "type": "Half Start",
+      "under_pressure": NaN
+    }
+  ]
+}

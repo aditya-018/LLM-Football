@@ -1,0 +1,779 @@
+{
+  "rows": 4090,
+  "unique_teams": 2,
+  "unique_players": 27,
+  "location_missing": 46,
+  "x_range": [
+    1.0,
+    120.0
+  ],
+  "y_range": [
+    0.1,
+    80.0
+  ],
+  "top_event_types": {
+    "Pass": 1110,
+    "Ball Receipt*": 1077,
+    "Carry": 849,
+    "Pressure": 370,
+    "Ball Recovery": 144,
+    "Duel": 110,
+    "Block": 59,
+    "Clearance": 56,
+    "Dribble": 54,
+    "Goal Keeper": 44
+  },
+  "sample_events": [
+    {
+      "bad_behaviour_card": NaN,
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "block_deflection": NaN,
+      "block_offensive": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_other": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_nutmeg": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_committed_offensive": NaN,
+      "foul_committed_type": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_punched_out": NaN,
+      "goalkeeper_shot_saved_off_target": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "5293472c-0b1e-40d5-acf6-7f63ea3266c3",
+      "index": 1,
+      "injury_stoppage_in_chain": NaN,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754129,
+      "minute": 0,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_deflected": NaN,
+      "pass_end_location": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_miscommunication": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_straight": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_through_ball": NaN,
+      "pass_type": NaN,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 1,
+      "possession_team": "Arsenal",
+      "possession_team_id": 1,
+      "related_events": NaN,
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_deflected": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_one_on_one": NaN,
+      "shot_outcome": NaN,
+      "shot_saved_off_target": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": {
+        "formation": 4231,
+        "lineup": [
+          {
+            "player": {
+              "id": 3461,
+              "name": "Petr \u010cech"
+            },
+            "position": {
+              "id": 1,
+              "name": "Goalkeeper"
+            },
+            "jersey_number": 33
+          },
+          {
+            "player": {
+              "id": 3511,
+              "name": "H\u00e9ctor Beller\u00edn Moruno"
+            },
+            "position": {
+              "id": 2,
+              "name": "Right Back"
+            },
+            "jersey_number": 24
+          },
+          {
+            "player": {
+              "id": 3713,
+              "name": "Calum Chambers"
+            },
+            "position": {
+              "id": 3,
+              "name": "Right Center Back"
+            },
+            "jersey_number": 21
+          },
+          {
+            "player": {
+              "id": 6746,
+              "name": "Gabriel Armando de Abreu"
+            },
+            "position": {
+              "id": 5,
+              "name": "Left Center Back"
+            },
+            "jersey_number": 5
+          },
+          {
+            "player": {
+              "id": 3498,
+              "name": "Ignacio Monreal Eraso"
+            },
+            "position": {
+              "id": 6,
+              "name": "Left Back"
+            },
+            "jersey_number": 18
+          },
+          {
+            "player": {
+              "id": 3437,
+              "name": "Francis Joseph Coquelin"
+            },
+            "position": {
+              "id": 9,
+              "name": "Right Defensive Midfield"
+            },
+            "jersey_number": 34
+          },
+          {
+            "player": {
+              "id": 11386,
+              "name": "Santiago Cazorla Gonz\u00e1lez"
+            },
+            "position": {
+              "id": 11,
+              "name": "Left Defensive Midfield"
+            },
+            "jersey_number": 19
+          },
+          {
+            "player": {
+              "id": 3517,
+              "name": "Aaron Ramsey"
+            },
+            "position": {
+              "id": 17,
+              "name": "Right Wing"
+            },
+            "jersey_number": 16
+          },
+          {
+            "player": {
+              "id": 3496,
+              "name": "Mesut \u00d6zil"
+            },
+            "position": {
+              "id": 19,
+              "name": "Center Attacking Midfield"
+            },
+            "jersey_number": 11
+          },
+          {
+            "player": {
+              "id": 3385,
+              "name": "Alexis Alejandro S\u00e1nchez S\u00e1nchez"
+            },
+            "position": {
+              "id": 21,
+              "name": "Left Wing"
+            },
+            "jersey_number": 17
+          },
+          {
+            "player": {
+              "id": 3604,
+              "name": "Olivier Giroud"
+            },
+            "position": {
+              "id": 23,
+              "name": "Center Forward"
+            },
+            "jersey_number": 12
+          }
+        ]
+      },
+      "team": "Arsenal",
+      "team_id": 1,
+      "timestamp": "00:00:00.000",
+      "type": "Starting XI",
+      "under_pressure": NaN
+    },
+    {
+      "bad_behaviour_card": NaN,
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "block_deflection": NaN,
+      "block_offensive": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_other": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_nutmeg": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_committed_offensive": NaN,
+      "foul_committed_type": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_punched_out": NaN,
+      "goalkeeper_shot_saved_off_target": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "66e84f79-45f3-4811-9677-53ede521c1e3",
+      "index": 2,
+      "injury_stoppage_in_chain": NaN,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754129,
+      "minute": 0,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_deflected": NaN,
+      "pass_end_location": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_miscommunication": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_straight": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_through_ball": NaN,
+      "pass_type": NaN,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 1,
+      "possession_team": "Arsenal",
+      "possession_team_id": 1,
+      "related_events": NaN,
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_deflected": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_one_on_one": NaN,
+      "shot_outcome": NaN,
+      "shot_saved_off_target": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": {
+        "formation": 433,
+        "lineup": [
+          {
+            "player": {
+              "id": 3539,
+              "name": "Simon Mignolet"
+            },
+            "position": {
+              "id": 1,
+              "name": "Goalkeeper"
+            },
+            "jersey_number": 22
+          },
+          {
+            "player": {
+              "id": 4590,
+              "name": "Nathaniel Edwin Clyne"
+            },
+            "position": {
+              "id": 2,
+              "name": "Right Back"
+            },
+            "jersey_number": 2
+          },
+          {
+            "player": {
+              "id": 18872,
+              "name": "Martin \u0160krtel"
+            },
+            "position": {
+              "id": 3,
+              "name": "Right Center Back"
+            },
+            "jersey_number": 37
+          },
+          {
+            "player": {
+              "id": 3471,
+              "name": "Dejan Lovren"
+            },
+            "position": {
+              "id": 5,
+              "name": "Left Center Back"
+            },
+            "jersey_number": 6
+          },
+          {
+            "player": {
+              "id": 3495,
+              "name": "Joe Gomez"
+            },
+            "position": {
+              "id": 6,
+              "name": "Left Back"
+            },
+            "jersey_number": 12
+          },
+          {
+            "player": {
+              "id": 7780,
+              "name": "Lucas Pezzini Leiva"
+            },
+            "position": {
+              "id": 10,
+              "name": "Center Defensive Midfield"
+            },
+            "jersey_number": 21
+          },
+          {
+            "player": {
+              "id": 3473,
+              "name": "James Philip Milner"
+            },
+            "position": {
+              "id": 13,
+              "name": "Right Center Midfield"
+            },
+            "jersey_number": 7
+          },
+          {
+            "player": {
+              "id": 3493,
+              "name": "Emre Can"
+            },
+            "position": {
+              "id": 15,
+              "name": "Left Center Midfield"
+            },
+            "jersey_number": 23
+          },
+          {
+            "player": {
+              "id": 3535,
+              "name": "Roberto Firmino Barbosa de Oliveira"
+            },
+            "position": {
+              "id": 17,
+              "name": "Right Wing"
+            },
+            "jersey_number": 11
+          },
+          {
+            "player": {
+              "id": 3501,
+              "name": "Philippe Coutinho Correia"
+            },
+            "position": {
+              "id": 21,
+              "name": "Left Wing"
+            },
+            "jersey_number": 10
+          },
+          {
+            "player": {
+              "id": 3380,
+              "name": "Christian Benteke Liolo"
+            },
+            "position": {
+              "id": 23,
+              "name": "Center Forward"
+            },
+            "jersey_number": 9
+          }
+        ]
+      },
+      "team": "Liverpool",
+      "team_id": 24,
+      "timestamp": "00:00:00.000",
+      "type": "Starting XI",
+      "under_pressure": NaN
+    },
+    {
+      "bad_behaviour_card": NaN,
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "block_deflection": NaN,
+      "block_offensive": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_other": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_nutmeg": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_committed_offensive": NaN,
+      "foul_committed_type": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_punched_out": NaN,
+      "goalkeeper_shot_saved_off_target": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "468c742f-791a-466c-9c7c-153ef5a3d8b0",
+      "index": 3,
+      "injury_stoppage_in_chain": NaN,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754129,
+      "minute": 0,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_deflected": NaN,
+      "pass_end_location": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_miscommunication": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_straight": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_through_ball": NaN,
+      "pass_type": NaN,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 1,
+      "possession_team": "Arsenal",
+      "possession_team_id": 1,
+      "related_events": [
+        "0f156556-fbf5-430a-8bac-1ba4fce48403"
+      ],
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_deflected": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_one_on_one": NaN,
+      "shot_outcome": NaN,
+      "shot_saved_off_target": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": NaN,
+      "team": "Liverpool",
+      "team_id": 24,
+      "timestamp": "00:00:00.000",
+      "type": "Half Start",
+      "under_pressure": NaN
+    },
+    {
+      "bad_behaviour_card": NaN,
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "block_deflection": NaN,
+      "block_offensive": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_other": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_nutmeg": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_committed_offensive": NaN,
+      "foul_committed_type": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_punched_out": NaN,
+      "goalkeeper_shot_saved_off_target": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "0f156556-fbf5-430a-8bac-1ba4fce48403",
+      "index": 4,
+      "injury_stoppage_in_chain": NaN,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754129,
+      "minute": 0,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_deflected": NaN,
+      "pass_end_location": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_miscommunication": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_straight": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_through_ball": NaN,
+      "pass_type": NaN,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 1,
+      "possession_team": "Arsenal",
+      "possession_team_id": 1,
+      "related_events": [
+        "468c742f-791a-466c-9c7c-153ef5a3d8b0"
+      ],
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_deflected": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_one_on_one": NaN,
+      "shot_outcome": NaN,
+      "shot_saved_off_target": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": NaN,
+      "team": "Arsenal",
+      "team_id": 1,
+      "timestamp": "00:00:00.000",
+      "type": "Half Start",
+      "under_pressure": NaN
+    },
+    {
+      "bad_behaviour_card": NaN,
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "block_deflection": NaN,
+      "block_offensive": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_other": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_nutmeg": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_committed_offensive": NaN,
+      "foul_committed_type": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_punched_out": NaN,
+      "goalkeeper_shot_saved_off_target": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "f15b1f97-05a5-44bb-a7d1-94ab4a6f24c0",
+      "index": 1986,
+      "injury_stoppage_in_chain": NaN,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754129,
+      "minute": 45,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_deflected": NaN,
+      "pass_end_location": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_miscommunication": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_straight": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_through_ball": NaN,
+      "pass_type": NaN,
+      "period": 2,
+      "play_pattern": "From Free Kick",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 97,
+      "possession_team": "Liverpool",
+      "possession_team_id": 24,
+      "related_events": [
+        "9d32b601-9408-4f49-ab35-1242ee1b4f6c"
+      ],
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_deflected": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_one_on_one": NaN,
+      "shot_outcome": NaN,
+      "shot_saved_off_target": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": NaN,
+      "team": "Arsenal",
+      "team_id": 1,
+      "timestamp": "00:00:00.000",
+      "type": "Half Start",
+      "under_pressure": NaN
+    }
+  ]
+}

@@ -1,0 +1,734 @@
+{
+  "rows": 3326,
+  "unique_teams": 2,
+  "unique_players": 28,
+  "location_missing": 54,
+  "x_range": [
+    0.1,
+    120.0
+  ],
+  "y_range": [
+    0.1,
+    80.0
+  ],
+  "top_event_types": {
+    "Pass": 946,
+    "Ball Receipt*": 841,
+    "Carry": 764,
+    "Pressure": 270,
+    "Ball Recovery": 103,
+    "Duel": 72,
+    "Clearance": 67,
+    "Dribble": 31,
+    "Goal Keeper": 29,
+    "Block": 26
+  },
+  "sample_events": [
+    {
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "block_deflection": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_other": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "d124262e-cb70-45c7-896e-53845aa68ec6",
+      "index": 1,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754309,
+      "minute": 0,
+      "miscontrol_aerial_won": NaN,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_end_location": NaN,
+      "pass_goal_assist": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_straight": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_through_ball": NaN,
+      "pass_type": NaN,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 1,
+      "possession_team": "Southampton",
+      "possession_team_id": 25,
+      "related_events": NaN,
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_deflected": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_one_on_one": NaN,
+      "shot_outcome": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": {
+        "formation": 4231,
+        "lineup": [
+          {
+            "player": {
+              "id": 20201,
+              "name": "Maarten Stekelenburg"
+            },
+            "position": {
+              "id": 1,
+              "name": "Goalkeeper"
+            },
+            "jersey_number": 22
+          },
+          {
+            "player": {
+              "id": 3590,
+              "name": "Rhu-endly Martina"
+            },
+            "position": {
+              "id": 2,
+              "name": "Right Back"
+            },
+            "jersey_number": 15
+          },
+          {
+            "player": {
+              "id": 3960,
+              "name": "Jos\u00e9 Miguel da Rocha Fonte"
+            },
+            "position": {
+              "id": 3,
+              "name": "Right Center Back"
+            },
+            "jersey_number": 6
+          },
+          {
+            "player": {
+              "id": 3669,
+              "name": "Virgil van Dijk"
+            },
+            "position": {
+              "id": 5,
+              "name": "Left Center Back"
+            },
+            "jersey_number": 17
+          },
+          {
+            "player": {
+              "id": 20045,
+              "name": "Ryan Bertrand"
+            },
+            "position": {
+              "id": 6,
+              "name": "Left Back"
+            },
+            "jersey_number": 21
+          },
+          {
+            "player": {
+              "id": 3098,
+              "name": "Victor Wanyama"
+            },
+            "position": {
+              "id": 9,
+              "name": "Right Defensive Midfield"
+            },
+            "jersey_number": 12
+          },
+          {
+            "player": {
+              "id": 16181,
+              "name": "Jordy Clasie"
+            },
+            "position": {
+              "id": 11,
+              "name": "Left Defensive Midfield"
+            },
+            "jersey_number": 4
+          },
+          {
+            "player": {
+              "id": 3328,
+              "name": "James Ward-Prowse"
+            },
+            "position": {
+              "id": 17,
+              "name": "Right Wing"
+            },
+            "jersey_number": 16
+          },
+          {
+            "player": {
+              "id": 3629,
+              "name": "Sadio Man\u00e9"
+            },
+            "position": {
+              "id": 19,
+              "name": "Center Attacking Midfield"
+            },
+            "jersey_number": 10
+          },
+          {
+            "player": {
+              "id": 3828,
+              "name": "Steven Davis"
+            },
+            "position": {
+              "id": 21,
+              "name": "Left Wing"
+            },
+            "jersey_number": 8
+          },
+          {
+            "player": {
+              "id": 3842,
+              "name": "Shane Long"
+            },
+            "position": {
+              "id": 23,
+              "name": "Center Forward"
+            },
+            "jersey_number": 7
+          }
+        ]
+      },
+      "team": "Southampton",
+      "team_id": 25,
+      "timestamp": "00:00:00.000",
+      "type": "Starting XI",
+      "under_pressure": NaN
+    },
+    {
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "block_deflection": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_other": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "a1b2685c-406d-4eb6-a807-c699865fe3c7",
+      "index": 2,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754309,
+      "minute": 0,
+      "miscontrol_aerial_won": NaN,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_end_location": NaN,
+      "pass_goal_assist": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_straight": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_through_ball": NaN,
+      "pass_type": NaN,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 1,
+      "possession_team": "Southampton",
+      "possession_team_id": 25,
+      "related_events": NaN,
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_deflected": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_one_on_one": NaN,
+      "shot_outcome": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": {
+        "formation": 4231,
+        "lineup": [
+          {
+            "player": {
+              "id": 3461,
+              "name": "Petr \u010cech"
+            },
+            "position": {
+              "id": 1,
+              "name": "Goalkeeper"
+            },
+            "jersey_number": 33
+          },
+          {
+            "player": {
+              "id": 3511,
+              "name": "H\u00e9ctor Beller\u00edn Moruno"
+            },
+            "position": {
+              "id": 2,
+              "name": "Right Back"
+            },
+            "jersey_number": 24
+          },
+          {
+            "player": {
+              "id": 3475,
+              "name": "Per Mertesacker"
+            },
+            "position": {
+              "id": 3,
+              "name": "Right Center Back"
+            },
+            "jersey_number": 4
+          },
+          {
+            "player": {
+              "id": 3394,
+              "name": "Laurent Koscielny"
+            },
+            "position": {
+              "id": 5,
+              "name": "Left Center Back"
+            },
+            "jersey_number": 6
+          },
+          {
+            "player": {
+              "id": 3498,
+              "name": "Ignacio Monreal Eraso"
+            },
+            "position": {
+              "id": 6,
+              "name": "Left Back"
+            },
+            "jersey_number": 18
+          },
+          {
+            "player": {
+              "id": 6631,
+              "name": "Mathieu Flamini"
+            },
+            "position": {
+              "id": 9,
+              "name": "Right Defensive Midfield"
+            },
+            "jersey_number": 20
+          },
+          {
+            "player": {
+              "id": 3517,
+              "name": "Aaron Ramsey"
+            },
+            "position": {
+              "id": 11,
+              "name": "Left Defensive Midfield"
+            },
+            "jersey_number": 16
+          },
+          {
+            "player": {
+              "id": 5581,
+              "name": "Joel Nathaniel Campbell Samuels"
+            },
+            "position": {
+              "id": 17,
+              "name": "Right Wing"
+            },
+            "jersey_number": 28
+          },
+          {
+            "player": {
+              "id": 3496,
+              "name": "Mesut \u00d6zil"
+            },
+            "position": {
+              "id": 19,
+              "name": "Center Attacking Midfield"
+            },
+            "jersey_number": 11
+          },
+          {
+            "player": {
+              "id": 3668,
+              "name": "Theo Walcott"
+            },
+            "position": {
+              "id": 21,
+              "name": "Left Wing"
+            },
+            "jersey_number": 14
+          },
+          {
+            "player": {
+              "id": 3604,
+              "name": "Olivier Giroud"
+            },
+            "position": {
+              "id": 23,
+              "name": "Center Forward"
+            },
+            "jersey_number": 12
+          }
+        ]
+      },
+      "team": "Arsenal",
+      "team_id": 1,
+      "timestamp": "00:00:00.000",
+      "type": "Starting XI",
+      "under_pressure": NaN
+    },
+    {
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "block_deflection": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_other": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "faf9c0c3-661e-487d-bf68-feaa3b68ed79",
+      "index": 3,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754309,
+      "minute": 0,
+      "miscontrol_aerial_won": NaN,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_end_location": NaN,
+      "pass_goal_assist": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_straight": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_through_ball": NaN,
+      "pass_type": NaN,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 1,
+      "possession_team": "Southampton",
+      "possession_team_id": 25,
+      "related_events": [
+        "1760b1ad-3b7c-410f-b782-0665886825a1"
+      ],
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_deflected": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_one_on_one": NaN,
+      "shot_outcome": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": NaN,
+      "team": "Arsenal",
+      "team_id": 1,
+      "timestamp": "00:00:00.000",
+      "type": "Half Start",
+      "under_pressure": NaN
+    },
+    {
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "block_deflection": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_other": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "1760b1ad-3b7c-410f-b782-0665886825a1",
+      "index": 4,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754309,
+      "minute": 0,
+      "miscontrol_aerial_won": NaN,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_end_location": NaN,
+      "pass_goal_assist": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_straight": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_through_ball": NaN,
+      "pass_type": NaN,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 1,
+      "possession_team": "Southampton",
+      "possession_team_id": 25,
+      "related_events": [
+        "faf9c0c3-661e-487d-bf68-feaa3b68ed79"
+      ],
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_deflected": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_one_on_one": NaN,
+      "shot_outcome": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": NaN,
+      "team": "Southampton",
+      "team_id": 25,
+      "timestamp": "00:00:00.000",
+      "type": "Half Start",
+      "under_pressure": NaN
+    },
+    {
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "block_deflection": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_other": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "b7423c9c-6800-47df-b875-179d0e2a92e1",
+      "index": 1743,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754309,
+      "minute": 45,
+      "miscontrol_aerial_won": NaN,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_end_location": NaN,
+      "pass_goal_assist": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_straight": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_through_ball": NaN,
+      "pass_type": NaN,
+      "period": 2,
+      "play_pattern": "From Goal Kick",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 95,
+      "possession_team": "Arsenal",
+      "possession_team_id": 1,
+      "related_events": [
+        "dde8962f-4780-4f5b-940f-a8cd0beef24e"
+      ],
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_deflected": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_one_on_one": NaN,
+      "shot_outcome": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": NaN,
+      "team": "Arsenal",
+      "team_id": 1,
+      "timestamp": "00:00:00.000",
+      "type": "Half Start",
+      "under_pressure": NaN
+    }
+  ]
+}

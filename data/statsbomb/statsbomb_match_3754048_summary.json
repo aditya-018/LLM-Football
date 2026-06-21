@@ -1,0 +1,744 @@
+{
+  "rows": 3643,
+  "unique_teams": 2,
+  "unique_players": 28,
+  "location_missing": 42,
+  "x_range": [
+    0.9,
+    120.0
+  ],
+  "y_range": [
+    0.1,
+    80.0
+  ],
+  "top_event_types": {
+    "Pass": 1025,
+    "Ball Receipt*": 975,
+    "Carry": 818,
+    "Pressure": 272,
+    "Duel": 91,
+    "Ball Recovery": 81,
+    "Interception": 67,
+    "Clearance": 57,
+    "Goal Keeper": 37,
+    "Dribble": 33
+  },
+  "sample_events": [
+    {
+      "50_50": NaN,
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "block_deflection": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_nutmeg": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_committed_offensive": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "8e86a37e-515c-4be9-9a4b-98deddb7aa25",
+      "index": 1,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754048,
+      "minute": 0,
+      "miscontrol_aerial_won": NaN,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_end_location": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_miscommunication": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_straight": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_through_ball": NaN,
+      "pass_type": NaN,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 1,
+      "possession_team": "Crystal Palace",
+      "possession_team_id": 31,
+      "related_events": NaN,
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_deflected": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_one_on_one": NaN,
+      "shot_outcome": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": {
+        "formation": 442,
+        "lineup": [
+          {
+            "player": {
+              "id": 3488,
+              "name": "Wayne Hennessey"
+            },
+            "position": {
+              "id": 1,
+              "name": "Goalkeeper"
+            },
+            "jersey_number": 13
+          },
+          {
+            "player": {
+              "id": 3443,
+              "name": "Joel Ward"
+            },
+            "position": {
+              "id": 2,
+              "name": "Right Back"
+            },
+            "jersey_number": 2
+          },
+          {
+            "player": {
+              "id": 3407,
+              "name": "Scott Dann"
+            },
+            "position": {
+              "id": 3,
+              "name": "Right Center Back"
+            },
+            "jersey_number": 6
+          },
+          {
+            "player": {
+              "id": 3693,
+              "name": "Damien Delaney"
+            },
+            "position": {
+              "id": 5,
+              "name": "Left Center Back"
+            },
+            "jersey_number": 27
+          },
+          {
+            "player": {
+              "id": 4884,
+              "name": "Pape N''Diaye Souar\u00e9"
+            },
+            "position": {
+              "id": 6,
+              "name": "Left Back"
+            },
+            "jersey_number": 23
+          },
+          {
+            "player": {
+              "id": 3277,
+              "name": "Yohan Cabaye"
+            },
+            "position": {
+              "id": 9,
+              "name": "Right Defensive Midfield"
+            },
+            "jersey_number": 7
+          },
+          {
+            "player": {
+              "id": 5489,
+              "name": "Mile Jedinak"
+            },
+            "position": {
+              "id": 11,
+              "name": "Left Defensive Midfield"
+            },
+            "jersey_number": 15
+          },
+          {
+            "player": {
+              "id": 3507,
+              "name": "Wilfried Zaha"
+            },
+            "position": {
+              "id": 12,
+              "name": "Right Midfield"
+            },
+            "jersey_number": 11
+          },
+          {
+            "player": {
+              "id": 19688,
+              "name": "Jason Puncheon"
+            },
+            "position": {
+              "id": 16,
+              "name": "Left Midfield"
+            },
+            "jersey_number": 42
+          },
+          {
+            "player": {
+              "id": 3589,
+              "name": "Yannick Bolasie Yala"
+            },
+            "position": {
+              "id": 22,
+              "name": "Right Center Forward"
+            },
+            "jersey_number": 10
+          },
+          {
+            "player": {
+              "id": 3092,
+              "name": "Dwight Gayle"
+            },
+            "position": {
+              "id": 24,
+              "name": "Left Center Forward"
+            },
+            "jersey_number": 16
+          }
+        ]
+      },
+      "team": "Crystal Palace",
+      "team_id": 31,
+      "timestamp": "00:00:00.000",
+      "type": "Starting XI",
+      "under_pressure": NaN
+    },
+    {
+      "50_50": NaN,
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "block_deflection": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_nutmeg": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_committed_offensive": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "bf748ed6-28bc-4358-9124-134dc1224612",
+      "index": 2,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754048,
+      "minute": 0,
+      "miscontrol_aerial_won": NaN,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_end_location": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_miscommunication": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_straight": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_through_ball": NaN,
+      "pass_type": NaN,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 1,
+      "possession_team": "Crystal Palace",
+      "possession_team_id": 31,
+      "related_events": NaN,
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_deflected": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_one_on_one": NaN,
+      "shot_outcome": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": {
+        "formation": 4231,
+        "lineup": [
+          {
+            "player": {
+              "id": 16309,
+              "name": "Joel Robles Bl\u00e1zquez"
+            },
+            "position": {
+              "id": 1,
+              "name": "Goalkeeper"
+            },
+            "jersey_number": 1
+          },
+          {
+            "player": {
+              "id": 4589,
+              "name": "S\u00e9amus Coleman"
+            },
+            "position": {
+              "id": 2,
+              "name": "Right Back"
+            },
+            "jersey_number": 23
+          },
+          {
+            "player": {
+              "id": 3244,
+              "name": "John Stones"
+            },
+            "position": {
+              "id": 3,
+              "name": "Right Center Back"
+            },
+            "jersey_number": 5
+          },
+          {
+            "player": {
+              "id": 4629,
+              "name": "Jos\u00e9 Ramiro Funes Mori"
+            },
+            "position": {
+              "id": 5,
+              "name": "Left Center Back"
+            },
+            "jersey_number": 25
+          },
+          {
+            "player": {
+              "id": 3518,
+              "name": "Leighton Baines"
+            },
+            "position": {
+              "id": 6,
+              "name": "Left Back"
+            },
+            "jersey_number": 3
+          },
+          {
+            "player": {
+              "id": 3607,
+              "name": "James McCarthy"
+            },
+            "position": {
+              "id": 13,
+              "name": "Right Center Midfield"
+            },
+            "jersey_number": 16
+          },
+          {
+            "player": {
+              "id": 3633,
+              "name": "Gareth Barry"
+            },
+            "position": {
+              "id": 15,
+              "name": "Left Center Midfield"
+            },
+            "jersey_number": 18
+          },
+          {
+            "player": {
+              "id": 26696,
+              "name": "Arouna Kon\u00e9"
+            },
+            "position": {
+              "id": 17,
+              "name": "Right Wing"
+            },
+            "jersey_number": 9
+          },
+          {
+            "player": {
+              "id": 4275,
+              "name": "Ross Barkley"
+            },
+            "position": {
+              "id": 19,
+              "name": "Center Attacking Midfield"
+            },
+            "jersey_number": 20
+          },
+          {
+            "player": {
+              "id": 3953,
+              "name": "Aaron Lennon"
+            },
+            "position": {
+              "id": 21,
+              "name": "Left Wing"
+            },
+            "jersey_number": 12
+          },
+          {
+            "player": {
+              "id": 3289,
+              "name": "Romelu Lukaku Menama"
+            },
+            "position": {
+              "id": 23,
+              "name": "Center Forward"
+            },
+            "jersey_number": 10
+          }
+        ]
+      },
+      "team": "Everton",
+      "team_id": 29,
+      "timestamp": "00:00:00.000",
+      "type": "Starting XI",
+      "under_pressure": NaN
+    },
+    {
+      "50_50": NaN,
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "block_deflection": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_nutmeg": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_committed_offensive": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "4cd744f2-ebea-4662-bba2-0b1b829eba92",
+      "index": 3,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754048,
+      "minute": 0,
+      "miscontrol_aerial_won": NaN,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_end_location": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_miscommunication": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_straight": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_through_ball": NaN,
+      "pass_type": NaN,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 1,
+      "possession_team": "Crystal Palace",
+      "possession_team_id": 31,
+      "related_events": [
+        "f76751ba-afbd-40fa-8e0c-d95e4c5eb36a"
+      ],
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_deflected": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_one_on_one": NaN,
+      "shot_outcome": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": NaN,
+      "team": "Everton",
+      "team_id": 29,
+      "timestamp": "00:00:00.000",
+      "type": "Half Start",
+      "under_pressure": NaN
+    },
+    {
+      "50_50": NaN,
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "block_deflection": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_nutmeg": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_committed_offensive": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "f76751ba-afbd-40fa-8e0c-d95e4c5eb36a",
+      "index": 4,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754048,
+      "minute": 0,
+      "miscontrol_aerial_won": NaN,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_end_location": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_miscommunication": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_straight": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_through_ball": NaN,
+      "pass_type": NaN,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 1,
+      "possession_team": "Crystal Palace",
+      "possession_team_id": 31,
+      "related_events": [
+        "4cd744f2-ebea-4662-bba2-0b1b829eba92"
+      ],
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_deflected": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_one_on_one": NaN,
+      "shot_outcome": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": NaN,
+      "team": "Crystal Palace",
+      "team_id": 31,
+      "timestamp": "00:00:00.000",
+      "type": "Half Start",
+      "under_pressure": NaN
+    },
+    {
+      "50_50": NaN,
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "block_deflection": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_nutmeg": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_committed_offensive": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "348c4519-4f9d-4ed7-9a78-59f36ef7b32a",
+      "index": 1787,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754048,
+      "minute": 45,
+      "miscontrol_aerial_won": NaN,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_end_location": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_miscommunication": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_straight": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_through_ball": NaN,
+      "pass_type": NaN,
+      "period": 2,
+      "play_pattern": "From Throw In",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 89,
+      "possession_team": "Everton",
+      "possession_team_id": 29,
+      "related_events": [
+        "25f7d7fd-09c2-4c22-bda1-8e78f0a2f76b"
+      ],
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_deflected": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_one_on_one": NaN,
+      "shot_outcome": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": NaN,
+      "team": "Everton",
+      "team_id": 29,
+      "timestamp": "00:00:00.000",
+      "type": "Half Start",
+      "under_pressure": NaN
+    }
+  ]
+}

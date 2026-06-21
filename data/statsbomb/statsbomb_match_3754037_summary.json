@@ -1,0 +1,734 @@
+{
+  "rows": 3913,
+  "unique_teams": 2,
+  "unique_players": 28,
+  "location_missing": 34,
+  "x_range": [
+    0.9,
+    120.0
+  ],
+  "y_range": [
+    0.1,
+    80.0
+  ],
+  "top_event_types": {
+    "Pass": 1126,
+    "Ball Receipt*": 1027,
+    "Carry": 901,
+    "Pressure": 326,
+    "Ball Recovery": 124,
+    "Duel": 78,
+    "Clearance": 56,
+    "Dribble": 37,
+    "Block": 32,
+    "Miscontrol": 29
+  },
+  "sample_events": [
+    {
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_offensive": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_nutmeg": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_committed_offensive": NaN,
+      "foul_committed_type": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "d36b860f-5606-4f1c-b788-2446dc94af87",
+      "index": 1,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754037,
+      "minute": 0,
+      "miscontrol_aerial_won": NaN,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_end_location": NaN,
+      "pass_goal_assist": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_no_touch": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_straight": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_type": NaN,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 1,
+      "possession_team": "Everton",
+      "possession_team_id": 29,
+      "related_events": NaN,
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_outcome": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": {
+        "formation": 4231,
+        "lineup": [
+          {
+            "player": {
+              "id": 13042,
+              "name": "Tim Howard"
+            },
+            "position": {
+              "id": 1,
+              "name": "Goalkeeper"
+            },
+            "jersey_number": 24
+          },
+          {
+            "player": {
+              "id": 3476,
+              "name": "Muhamed Be\u0161i\u0107"
+            },
+            "position": {
+              "id": 2,
+              "name": "Right Back"
+            },
+            "jersey_number": 17
+          },
+          {
+            "player": {
+              "id": 3244,
+              "name": "John Stones"
+            },
+            "position": {
+              "id": 3,
+              "name": "Right Center Back"
+            },
+            "jersey_number": 5
+          },
+          {
+            "player": {
+              "id": 4700,
+              "name": "Matthew Pennington"
+            },
+            "position": {
+              "id": 5,
+              "name": "Left Center Back"
+            },
+            "jersey_number": 38
+          },
+          {
+            "player": {
+              "id": 3518,
+              "name": "Leighton Baines"
+            },
+            "position": {
+              "id": 6,
+              "name": "Left Back"
+            },
+            "jersey_number": 3
+          },
+          {
+            "player": {
+              "id": 3607,
+              "name": "James McCarthy"
+            },
+            "position": {
+              "id": 13,
+              "name": "Right Center Midfield"
+            },
+            "jersey_number": 16
+          },
+          {
+            "player": {
+              "id": 20067,
+              "name": "Darron Gibson"
+            },
+            "position": {
+              "id": 15,
+              "name": "Left Center Midfield"
+            },
+            "jersey_number": 4
+          },
+          {
+            "player": {
+              "id": 3953,
+              "name": "Aaron Lennon"
+            },
+            "position": {
+              "id": 17,
+              "name": "Right Wing"
+            },
+            "jersey_number": 12
+          },
+          {
+            "player": {
+              "id": 4275,
+              "name": "Ross Barkley"
+            },
+            "position": {
+              "id": 19,
+              "name": "Center Attacking Midfield"
+            },
+            "jersey_number": 20
+          },
+          {
+            "player": {
+              "id": 3683,
+              "name": "Tom Cleverley"
+            },
+            "position": {
+              "id": 21,
+              "name": "Left Wing"
+            },
+            "jersey_number": 15
+          },
+          {
+            "player": {
+              "id": 3442,
+              "name": "El-Hadji Baye Oumar Niasse"
+            },
+            "position": {
+              "id": 23,
+              "name": "Center Forward"
+            },
+            "jersey_number": 14
+          }
+        ]
+      },
+      "team": "Everton",
+      "team_id": 29,
+      "timestamp": "00:00:00.000",
+      "type": "Starting XI",
+      "under_pressure": NaN
+    },
+    {
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_offensive": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_nutmeg": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_committed_offensive": NaN,
+      "foul_committed_type": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "99495381-5ec2-47da-a03c-56c19385eebb",
+      "index": 2,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754037,
+      "minute": 0,
+      "miscontrol_aerial_won": NaN,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_end_location": NaN,
+      "pass_goal_assist": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_no_touch": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_straight": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_type": NaN,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 1,
+      "possession_team": "Everton",
+      "possession_team_id": 29,
+      "related_events": NaN,
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_outcome": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": {
+        "formation": 442,
+        "lineup": [
+          {
+            "player": {
+              "id": 20074,
+              "name": "Artur Boruc"
+            },
+            "position": {
+              "id": 1,
+              "name": "Goalkeeper"
+            },
+            "jersey_number": 1
+          },
+          {
+            "player": {
+              "id": 3608,
+              "name": "Simon Francis"
+            },
+            "position": {
+              "id": 2,
+              "name": "Right Back"
+            },
+            "jersey_number": 2
+          },
+          {
+            "player": {
+              "id": 9626,
+              "name": "Tommy Elphick"
+            },
+            "position": {
+              "id": 3,
+              "name": "Right Center Back"
+            },
+            "jersey_number": 5
+          },
+          {
+            "player": {
+              "id": 3341,
+              "name": "Steve Cook"
+            },
+            "position": {
+              "id": 5,
+              "name": "Left Center Back"
+            },
+            "jersey_number": 3
+          },
+          {
+            "player": {
+              "id": 3345,
+              "name": "Charlie Daniels"
+            },
+            "position": {
+              "id": 6,
+              "name": "Left Back"
+            },
+            "jersey_number": 11
+          },
+          {
+            "player": {
+              "id": 3049,
+              "name": "Matt Ritchie"
+            },
+            "position": {
+              "id": 12,
+              "name": "Right Midfield"
+            },
+            "jersey_number": 30
+          },
+          {
+            "player": {
+              "id": 3304,
+              "name": "Harry Arter"
+            },
+            "position": {
+              "id": 13,
+              "name": "Right Center Midfield"
+            },
+            "jersey_number": 8
+          },
+          {
+            "player": {
+              "id": 3344,
+              "name": "Andrew Surman"
+            },
+            "position": {
+              "id": 15,
+              "name": "Left Center Midfield"
+            },
+            "jersey_number": 6
+          },
+          {
+            "player": {
+              "id": 3646,
+              "name": "Marc Pugh"
+            },
+            "position": {
+              "id": 16,
+              "name": "Left Midfield"
+            },
+            "jersey_number": 7
+          },
+          {
+            "player": {
+              "id": 3346,
+              "name": "Joshua King"
+            },
+            "position": {
+              "id": 22,
+              "name": "Right Center Forward"
+            },
+            "jersey_number": 7
+          },
+          {
+            "player": {
+              "id": 3616,
+              "name": "Callum Wilson"
+            },
+            "position": {
+              "id": 24,
+              "name": "Left Center Forward"
+            },
+            "jersey_number": 13
+          }
+        ]
+      },
+      "team": "AFC Bournemouth",
+      "team_id": 28,
+      "timestamp": "00:00:00.000",
+      "type": "Starting XI",
+      "under_pressure": NaN
+    },
+    {
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_offensive": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_nutmeg": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_committed_offensive": NaN,
+      "foul_committed_type": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "974ea3e2-6fcd-4461-9aa2-7b32fa05906b",
+      "index": 3,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754037,
+      "minute": 0,
+      "miscontrol_aerial_won": NaN,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_end_location": NaN,
+      "pass_goal_assist": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_no_touch": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_straight": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_type": NaN,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 1,
+      "possession_team": "Everton",
+      "possession_team_id": 29,
+      "related_events": [
+        "b3494be3-c329-412e-a6fc-1bbcd0136a78"
+      ],
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_outcome": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": NaN,
+      "team": "Everton",
+      "team_id": 29,
+      "timestamp": "00:00:00.000",
+      "type": "Half Start",
+      "under_pressure": NaN
+    },
+    {
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_offensive": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_nutmeg": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_committed_offensive": NaN,
+      "foul_committed_type": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "b3494be3-c329-412e-a6fc-1bbcd0136a78",
+      "index": 4,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754037,
+      "minute": 0,
+      "miscontrol_aerial_won": NaN,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_end_location": NaN,
+      "pass_goal_assist": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_no_touch": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_straight": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_type": NaN,
+      "period": 1,
+      "play_pattern": "Regular Play",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 1,
+      "possession_team": "Everton",
+      "possession_team_id": 29,
+      "related_events": [
+        "974ea3e2-6fcd-4461-9aa2-7b32fa05906b"
+      ],
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_outcome": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": NaN,
+      "team": "AFC Bournemouth",
+      "team_id": 28,
+      "timestamp": "00:00:00.000",
+      "type": "Half Start",
+      "under_pressure": NaN
+    },
+    {
+      "ball_receipt_outcome": NaN,
+      "ball_recovery_offensive": NaN,
+      "ball_recovery_recovery_failure": NaN,
+      "carry_end_location": NaN,
+      "clearance_aerial_won": NaN,
+      "clearance_body_part": NaN,
+      "clearance_head": NaN,
+      "clearance_left_foot": NaN,
+      "clearance_right_foot": NaN,
+      "counterpress": NaN,
+      "dribble_nutmeg": NaN,
+      "dribble_outcome": NaN,
+      "dribble_overrun": NaN,
+      "duel_outcome": NaN,
+      "duel_type": NaN,
+      "duration": 0.0,
+      "foul_committed_advantage": NaN,
+      "foul_committed_card": NaN,
+      "foul_committed_offensive": NaN,
+      "foul_committed_type": NaN,
+      "foul_won_advantage": NaN,
+      "foul_won_defensive": NaN,
+      "goalkeeper_body_part": NaN,
+      "goalkeeper_end_location": NaN,
+      "goalkeeper_outcome": NaN,
+      "goalkeeper_position": NaN,
+      "goalkeeper_technique": NaN,
+      "goalkeeper_type": NaN,
+      "id": "88977248-3e98-4c7d-92e1-7070eef768e6",
+      "index": 1976,
+      "interception_outcome": NaN,
+      "location": NaN,
+      "match_id": 3754037,
+      "minute": 45,
+      "miscontrol_aerial_won": NaN,
+      "off_camera": NaN,
+      "out": NaN,
+      "pass_aerial_won": NaN,
+      "pass_angle": NaN,
+      "pass_assisted_shot_id": NaN,
+      "pass_body_part": NaN,
+      "pass_cross": NaN,
+      "pass_cut_back": NaN,
+      "pass_end_location": NaN,
+      "pass_goal_assist": NaN,
+      "pass_height": NaN,
+      "pass_inswinging": NaN,
+      "pass_length": NaN,
+      "pass_no_touch": NaN,
+      "pass_outcome": NaN,
+      "pass_outswinging": NaN,
+      "pass_recipient": NaN,
+      "pass_recipient_id": NaN,
+      "pass_shot_assist": NaN,
+      "pass_straight": NaN,
+      "pass_switch": NaN,
+      "pass_technique": NaN,
+      "pass_type": NaN,
+      "period": 2,
+      "play_pattern": "From Free Kick",
+      "player": NaN,
+      "player_id": NaN,
+      "position": NaN,
+      "possession": 83,
+      "possession_team": "Everton",
+      "possession_team_id": 29,
+      "related_events": [
+        "3ad8cd18-d888-4daf-baf2-96161d10da4e"
+      ],
+      "second": 0,
+      "shot_aerial_won": NaN,
+      "shot_body_part": NaN,
+      "shot_end_location": NaN,
+      "shot_first_time": NaN,
+      "shot_freeze_frame": NaN,
+      "shot_key_pass_id": NaN,
+      "shot_outcome": NaN,
+      "shot_statsbomb_xg": NaN,
+      "shot_technique": NaN,
+      "shot_type": NaN,
+      "substitution_outcome": NaN,
+      "substitution_outcome_id": NaN,
+      "substitution_replacement": NaN,
+      "substitution_replacement_id": NaN,
+      "tactics": NaN,
+      "team": "Everton",
+      "team_id": 29,
+      "timestamp": "00:00:00.000",
+      "type": "Half Start",
+      "under_pressure": NaN
+    }
+  ]
+}
