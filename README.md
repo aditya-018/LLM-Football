@@ -48,6 +48,27 @@ export HUGGINGFACE_API_KEY="your_huggingface_api_key"
 streamlit run streamlit_app.py
 ```
 
+## Streamlit Cloud deployment
+
+This app can be deployed on Streamlit Community Cloud.
+
+1. Push your repository to GitHub.
+2. Open https://share.streamlit.io and sign in with GitHub.
+3. Create a new app and select this repository.
+4. Set the repository branch to `main` (or `master`) and the main file to `streamlit_app.py`.
+5. In the Streamlit app settings, add a secret for:
+   - `HUGGINGFACE_API_KEY`
+
+If you want the LLM report feature in Streamlit Cloud, use your Hugging Face API key there. The app reads it via `os.getenv('HUGGINGFACE_API_KEY')`.
+
+If you prefer a contained environment locally:
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
 If you prefer a contained environment, create one first:
 ```bash
 python3 -m venv .venv
