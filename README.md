@@ -7,6 +7,9 @@ This project implements the initial data collection layer for a football analyti
 - Provide a reusable ingestion pipeline for StatsBomb, football-data.org, API-Football, and Open Football Data
 - Store data locally for downstream analysis and report generation
 
+## License
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
 ## Setup
 1. Install Python dependencies into your base environment:
    ```bash
