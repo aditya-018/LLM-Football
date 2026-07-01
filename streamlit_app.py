@@ -434,7 +434,7 @@ with match_event_tabs[0]:
                 st.plotly_chart(fig, use_container_width=True)
 
         st.markdown('#### Raw team match event coverage')
-        st.write(f'Loaded {len(team_events)} team events from {len(match_ids)} match files.')
+        st.write(f'Loaded {len(team_events)} team events from {len(active_match_ids)} match files.')
         st.dataframe(team_events[['match_id', 'type', 'minute', 'position', 'pass_outcome', 'shot_outcome', 'player']].head(50), use_container_width=True)
     else:
         st.warning('Team-level event data was not found for the selected matches. Ensure the corresponding event JSON files exist in data/statsbomb.')
