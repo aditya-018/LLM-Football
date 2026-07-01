@@ -112,7 +112,20 @@ def train_xg_model(data_dir: Path, save_path: Path | None = None, test_size: flo
 
     X = _prepare_feature_matrix(shots)
     y = shots['goal'].astype(int)
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=random_state, stratify=y)
+
+    # Perform match-grouped split to prevent data leakage across shots in the same match
+    match_ids = shots['source_match_id'].unique()
+    if len(match_ids) >= 2:
+        train_matches, test_matches = train_test_split(match_ids, test_size=test_size, random_state=random_state)
+        train_idx = shots['source_match_id'].isin(train_matches)
+        test_idx = shots['source_match_id'].isin(test_matches)
+        X_train = X[train_idx]
+        y_train = y[train_idx]
+        X_test = X[test_idx]
+        y_test = y[test_idx]
+    else:
+        # Fallback to simple split if only 1 match exists
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=random_state, stratify=y)
 
     numeric_features = ['location_x', 'location_y', 'distance', 'angle']
     categorical_features = ['shot_body_part', 'shot_type', 'shot_technique', 'shot_one_on_one', 'under_pressure']
@@ -144,6 +157,49 @@ def train_xg_model(data_dir: Path, save_path: Path | None = None, test_size: flo
     except Exception:
         auc, loss = None, None
 
+    # Calculate Brier Score
+    try:
+        from sklearn.metrics import brier_score_loss
+        brier = float(brier_score_loss(y_test, y_pred_proba))
+    except Exception:
+        brier = None
+
+    # Calculate Calibration Curve
+    try:
+        from sklearn.calibration import calibration_curve
+        prob_true, prob_pred = calibration_curve(y_test, y_pred_proba, n_bins=5)
+        calibration = {
+            'prob_true': prob_true.tolist(),
+            'prob_pred': prob_pred.tolist()
+        }
+    except Exception:
+        calibration = None
+
+    # Extract Feature Importances
+    try:
+        preprocessor_fitted = model.named_steps['preprocessor']
+        classifier_fitted = model.named_steps['classifier']
+        
+        if hasattr(preprocessor_fitted, 'get_feature_names_out'):
+            feature_names = list(preprocessor_fitted.get_feature_names_out())
+        else:
+            feature_names = numeric_features.copy()
+            cat_trans = preprocessor_fitted.named_transformers_['cat']
+            if hasattr(cat_trans, 'get_feature_names'):
+                cat_names = list(cat_trans.get_feature_names(categorical_features))
+            else:
+                cat_names = [f"cat_{i}" for i in range(len(classifier_fitted.feature_importances_) - len(numeric_features))]
+            feature_names.extend(cat_names)
+            
+        importances = classifier_fitted.feature_importances_.tolist()
+        feature_importance = sorted(
+            [{"feature": name, "importance": float(imp)} for name, imp in zip(feature_names, importances)],
+            key=lambda x: x['importance'],
+            reverse=True
+        )
+    except Exception:
+        feature_importance = []
+
     if save_path is not None:
         save_path.parent.mkdir(parents=True, exist_ok=True)
         joblib.dump(model, save_path)
@@ -153,6 +209,9 @@ def train_xg_model(data_dir: Path, save_path: Path | None = None, test_size: flo
         'validation_samples': int(len(X_test)),
         'roc_auc': auc,
         'log_loss': loss,
+        'brier_score': brier,
+        'calibration': calibration,
+        'feature_importance': feature_importance,
     }
     model.metrics_ = metrics
     return model

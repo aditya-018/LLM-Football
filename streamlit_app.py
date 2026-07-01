@@ -138,17 +138,23 @@ def summarize_team_events(team_events: pd.DataFrame) -> dict:
 
     passes = team_events[team_events['type'] == 'Pass']
     summary['passes'] = len(passes)
-    if not passes.empty and 'pass_outcome' in passes.columns:
-        completed = passes['pass_outcome'].astype(str).str.lower().eq('complete')
+    if not passes.empty:
+        if 'pass_outcome' in passes.columns:
+            completed = passes['pass_outcome'].isna()
+        else:
+            completed = pd.Series(True, index=passes.index)
         summary['pass_completion'] = float(completed.sum()) / len(passes) if len(passes) > 0 else 0.0
     else:
         summary['pass_completion'] = None
 
     shots = team_events[team_events['type'] == 'Shot']
     summary['shots'] = len(shots)
-    if not shots.empty and 'shot_outcome' in shots.columns:
-        on_target = shots['shot_outcome'].astype(str).str.lower().isin(['saved', 'goal', 'blocked', 'off target', 'post'])
-        summary['shot_accuracy'] = float(on_target.sum()) / len(shots) if len(shots) > 0 else 0.0
+    if not shots.empty:
+        if 'shot_outcome' in shots.columns:
+            on_target = shots['shot_outcome'].astype(str).str.lower().str.startswith('saved') | shots['shot_outcome'].astype(str).str.lower().eq('goal')
+            summary['shot_accuracy'] = float(on_target.sum()) / len(shots) if len(shots) > 0 else 0.0
+        else:
+            summary['shot_accuracy'] = 0.0
     else:
         summary['shot_accuracy'] = None
 
@@ -182,20 +188,27 @@ def format_metric(value):
 
 
 def plot_shot_map(shots: pd.DataFrame, title: str) -> plt.Figure:
-    pitch = Pitch(pitch_type='statsbomb', pitch_color='#a8bc95', line_color='#222222')
+    pitch = Pitch(pitch_type='statsbomb', pitch_color='#151b26', line_color='#3f4b5e')
     fig, ax = pitch.draw(figsize=(8, 5))
+    fig.patch.set_facecolor('#0a0e17')
+    ax.set_facecolor('#151b26')
 
     if shots.empty:
-        ax.text(60, 40, 'No shot data available', ha='center', va='center', color='red', fontsize=14)
+        ax.text(60, 40, 'No shot data available', ha='center', va='center', color='#ff4b4b', fontsize=14)
         return fig
 
     x = shots['location_x'].astype(float)
     y = shots['location_y'].astype(float)
     sizes = shots.get('xg_model', pd.Series(0.1, index=shots.index)).fillna(0.1).astype(float) * 200
-    cmap = 'inferno'
-    sc = ax.scatter(x, y, s=sizes, c=shots.get('xg_model', 0.1), cmap=cmap, edgecolors='black', alpha=0.9)
-    cbar = fig.colorbar(sc, ax=ax, label='Predicted xG', shrink=0.7)
-    ax.set_title(title)
+    cmap = 'cool' # Modern cyan-to-magenta sport analytics colormap
+    sc = ax.scatter(x, y, s=sizes, c=shots.get('xg_model', 0.1), cmap=cmap, edgecolors='white', alpha=0.9)
+    
+    cbar = fig.colorbar(sc, ax=ax, shrink=0.7)
+    cbar.set_label('Predicted xG', color='#ffffff', labelpad=10)
+    cbar.ax.yaxis.set_tick_params(color='#ffffff')
+    plt.setp(plt.getp(cbar.ax.axes, 'yticklabels'), color='#ffffff')
+    
+    ax.set_title(title, color='#ffffff', fontsize=14, pad=15)
     return fig
 
 
@@ -239,36 +252,51 @@ match_list = load_match_list(Path(selected_season['path']))
 teams = sorted(set(match_list['home_team'].dropna().astype(str).unique()).union(set(match_list['away_team'].dropna().astype(str).unique())))
 selected_team = st.sidebar.selectbox('Select team', teams)
 
-sidebar_model = st.sidebar.expander('Modeling & Report Tools', expanded=True)
-with sidebar_model:
-    model_status = 'available' if XG_MODEL_PATH.exists() else 'not trained'
-    st.write('xG model status:', model_status)
-    if st.button('Train xG model from local shots', key='train_xg'):
-        with st.spinner('Training xG model from existing StatsBomb shot events...'):
-            try:
-                xg_model = train_xg_model(DATA_DIR, save_path=XG_MODEL_PATH)
-                st.success('xG model trained and saved.')
-                if hasattr(xg_model, 'metrics_'):
-                    st.json(xg_model.metrics_)
-            except Exception as exc:
-                st.error(f'Failed to train xG model: {exc}')
-                xg_model = None
-    ollama_available = has_ollama()
-    huggingface_available = has_huggingface()
-    st.write('Ollama available:', 'Yes' if ollama_available else 'No')
-    st.write('Hugging Face available:', 'Yes' if huggingface_available else 'No')
-    if ollama_available:
-        st.write('Use `ollama pull llama3` locally to enable narrative generation.')
-    elif huggingface_available:
-        st.write('Hugging Face is configured via HUGGINGFACE_API_KEY and will be used for report generation.')
-    else:
-        st.write('Install Ollama locally or set HUGGINGFACE_API_KEY to enable LLM coaching reports.')
-
 try:
     xg_model = load_xg_model(XG_MODEL_PATH) if XG_MODEL_PATH.exists() else None
 except Exception as exc:
     logger.error('Failed loading xG model: %s', exc)
     xg_model = None
+
+sidebar_model = st.sidebar.expander('Modeling & Report Tools', expanded=True)
+with sidebar_model:
+    model_status = 'Available' if xg_model is not None else 'Not Trained'
+    st.write(f'**xG Model:** {model_status}')
+    if st.button('Train xG model from local shots', key='train_xg'):
+        with st.spinner('Training xG model from existing StatsBomb shot events...'):
+            try:
+                xg_model = train_xg_model(DATA_DIR, save_path=XG_MODEL_PATH)
+                st.success('xG model trained and saved.')
+            except Exception as exc:
+                st.error(f'Failed to train xG model: {exc}')
+                xg_model = None
+
+    if xg_model is not None and hasattr(xg_model, 'metrics_'):
+        st.markdown('---')
+        st.markdown('### Model Evaluation')
+        metrics = xg_model.metrics_
+        st.metric('ROC-AUC Score', f"{metrics.get('roc_auc', 0.0):.3f}")
+        st.metric('Log Loss', f"{metrics.get('log_loss', 0.0):.3f}")
+        if 'brier_score' in metrics and metrics['brier_score'] is not None:
+            st.metric('Brier Score', f"{metrics.get('brier_score', 0.0):.3f}")
+            
+        feat_imp = metrics.get('feature_importance', [])
+        if feat_imp:
+            st.markdown('### Feature Importance')
+            df_imp = pd.DataFrame(feat_imp).head(8)
+            df_imp['feature'] = df_imp['feature'].str.replace('num__', '').str.replace('cat__', '')
+            fig_imp = px.bar(df_imp, x='importance', y='feature', orientation='h')
+            fig_imp.update_layout(
+                yaxis={'categoryorder': 'total ascending'},
+                margin=dict(l=5, r=5, t=5, b=5),
+                height=220,
+                paper_bgcolor='rgba(0,0,0,0)',
+                plot_bgcolor='rgba(0,0,0,0)',
+                font=dict(color='white')
+            )
+            fig_imp.update_xaxes(showgrid=True, gridcolor='#3f4b5e')
+            fig_imp.update_yaxes(showgrid=False)
+            st.plotly_chart(fig_imp, use_container_width=True)
 
 team_matches = match_list[(match_list['home_team'] == selected_team) | (match_list['away_team'] == selected_team)].copy()
 team_matches = compute_team_results(selected_team, team_matches)
@@ -278,13 +306,29 @@ if team_matches.empty:
     st.warning('No matches found for this team in the selected season metadata.')
     st.stop()
 
-# Prepare list of match IDs for reuse in multiple calls below
-match_ids = team_matches['match_id'].astype(int).tolist()
+# Interactive Match Selector in Sidebar
+match_options = ["Season Aggregate (All Matches)"]
+for idx, row in team_matches.iterrows():
+    match_options.append(f"{row['match_date']} - vs {row['opponent']} ({row['result']} {row['goals_for']}-{row['goals_against']})")
 
-team_events = load_team_events(match_ids, selected_team)
-match_events = load_match_events_for_matches(match_ids)
-summary = summarize_team_events(team_events)
-ml_summary = build_team_match_summary(team_matches, summary)
+selected_match_str = st.sidebar.selectbox("Select Match View", match_options)
+
+if selected_match_str == "Season Aggregate (All Matches)":
+    active_matches_df = team_matches
+    active_match_ids = team_matches['match_id'].astype(int).tolist()
+    team_events = load_team_events(active_match_ids, selected_team)
+    match_events = load_match_events_for_matches(active_match_ids)
+    summary = summarize_team_events(team_events)
+    ml_summary = build_team_match_summary(team_matches, summary)
+else:
+    match_idx = match_options.index(selected_match_str) - 1
+    selected_match_row = team_matches.iloc[match_idx]
+    active_matches_df = team_matches.iloc[[match_idx]]
+    active_match_ids = [int(selected_match_row['match_id'])]
+    team_events = load_team_events(active_match_ids, selected_team)
+    match_events = load_match_events_for_matches(active_match_ids)
+    summary = summarize_team_events(team_events)
+    ml_summary = build_team_match_summary(active_matches_df, summary)
 
 team_profiles = build_team_profiles(DATA_DIR)
 clustered_profiles = cluster_teams(team_profiles)
@@ -299,18 +343,18 @@ if xg_model is not None and not match_events.empty:
         logger.warning('xG summary failed: %s', exc)
         xg_report = None
 
-wins = int((team_matches['result'] == 'Win').sum())
-draws = int((team_matches['result'] == 'Draw').sum())
-losses = int((team_matches['result'] == 'Loss').sum())
+wins = int((active_matches_df['result'] == 'Win').sum())
+draws = int((active_matches_df['result'] == 'Draw').sum())
+losses = int((active_matches_df['result'] == 'Loss').sum())
 
 with st.expander('Team summary metrics', expanded=True):
     col1, col2, col3 = st.columns(3)
-    col1.metric('Matches available', len(team_matches))
+    col1.metric('Matches available', len(active_matches_df))
     col1.metric('Wins', wins)
     col2.metric('Draws', draws)
     col2.metric('Losses', losses)
-    col3.metric('Goals for', int(team_matches['goals_for'].sum()))
-    col3.metric('Goals against', int(team_matches['goals_against'].sum()))
+    col3.metric('Goals for', int(active_matches_df['goals_for'].sum()))
+    col3.metric('Goals against', int(active_matches_df['goals_against'].sum()))
     if summary.get('pass_completion') is not None:
         col1.metric('Pass completion', format_metric(summary.get('pass_completion')))
     if summary.get('shots') is not None:
@@ -366,7 +410,10 @@ with match_event_tabs[0]:
         if summary['pass_completion'] is not None:
             st.markdown('#### Pass completion over matches')
             pass_records = team_events[team_events['type'] == 'Pass'].copy()
-            pass_records['completed'] = pass_records['pass_outcome'].astype(str).str.lower() == 'complete'
+            if 'pass_outcome' in pass_records.columns:
+                pass_records['completed'] = pass_records['pass_outcome'].isna()
+            else:
+                pass_records['completed'] = True
             if not pass_records.empty:
                 pass_summary = pass_records.groupby('match_id')['completed'].agg(['sum', 'count']).reset_index()
                 pass_summary['completion'] = pass_summary['sum'] / pass_summary['count']
@@ -429,6 +476,45 @@ with match_event_tabs[3]:
         st.warning('No LLM provider is configured. Install Ollama locally or set HUGGINGFACE_API_KEY to generate coaching reports.')
         st.code('ollama pull llama3')
         st.code('export HUGGINGFACE_API_KEY="your_token_here"')
+    # Lightweight Hugging Face connectivity diagnostic
+    if st.button('Test Hugging Face connectivity'):
+        import socket
+        import requests
+        import os
+
+        api_key = os.getenv('HUGGINGFACE_API_KEY')
+        # Streamlit secrets fallback
+        try:
+            if not api_key and hasattr(st, 'secrets'):
+                api_key = st.secrets.get('HUGGINGFACE_API_KEY')
+        except Exception:
+            pass
+
+        if not api_key:
+            st.error('No HUGGINGFACE_API_KEY found in environment or Streamlit secrets.')
+        else:
+            try:
+                socket.getaddrinfo('api-inference.huggingface.co', 443)
+            except Exception as e:
+                st.error(f'DNS lookup failed for api-inference.huggingface.co: {e}')
+            else:
+                try:
+                    resp = requests.post(
+                        'https://api-inference.huggingface.co/v1/models/gpt2',
+                        headers={
+                            'Authorization': f'Bearer {api_key}',
+                            'Content-Type': 'application/json',
+                        },
+                        json={'inputs': 'Hello'},
+                        timeout=10,
+                    )
+                    if resp.status_code == 200:
+                        st.success('Hugging Face connectivity test succeeded (200).')
+                    else:
+                        st.error(f'Hugging Face returned {resp.status_code}: {resp.text[:300]}')
+                except requests.exceptions.RequestException as e:
+                    st.error(f'Network request to Hugging Face failed: {e}')
+
     opponent = st.selectbox('Select opponent to profile', sorted(team_matches['opponent'].unique()))
     if st.button('Generate coaching report'):
         if not ollama_available and not huggingface_available:
@@ -448,4 +534,12 @@ with match_event_tabs[3]:
                 st.markdown('#### Generated coaching report')
                 st.write(report)
             except Exception as exc:
-                st.error(f'Failed to generate coaching report: {exc}')
+                msg = str(exc)
+                if 'Failed to resolve' in msg or 'Name or service not known' in msg or 'NameResolutionError' in msg:
+                    st.error('Failed to reach Hugging Face API: DNS resolution issue. Check network or platform egress settings.')
+                elif '401' in msg or 'Unauthorized' in msg or 'Bad credentials' in msg:
+                    st.error('Authentication failed: check HUGGINGFACE_API_KEY in your Streamlit secrets or environment.')
+                elif '429' in msg or 'rate limit' in msg.lower():
+                    st.error('Rate limited: your Hugging Face account may have hit inference limits.')
+                else:
+                    st.error(f'Failed to generate coaching report: {exc}')
