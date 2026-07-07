@@ -81,7 +81,7 @@ def generate_nvidia_report(prompt: str, model: str = NVIDIA_DEFAULT_MODEL) -> st
     if not api_key or not base_url:
         raise EnvironmentError('NVIDIA_API_KEY and NVIDIA_BASE_URL must be set to use NVIDIA Build models.')
 
-    url = f'{base_url.rstrip("/")}/v1/chat/completions'
+    url = f'{base_url.rstrip("/")}/chat/completions'
     headers = {
         'Authorization': f'Bearer {api_key}',
         'Content-Type': 'application/json',
