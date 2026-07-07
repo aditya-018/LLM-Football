@@ -12,7 +12,7 @@ from mplsoccer import Pitch
 
 from analytics.xgboost_model import load_xg_model, train_xg_model, summarize_match_xg
 from analytics.tactical_clustering import build_team_profiles, cluster_teams, describe_cluster_centers
-from llm.ollama_report import build_coaching_report_prompt, generate_ollama_report, has_ollama, has_huggingface
+from llm.ollama_report import build_coaching_report_prompt, generate_ollama_report, has_ollama, has_huggingface, has_nvidia
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s')
 logger = logging.getLogger(__name__)
@@ -472,10 +472,13 @@ with match_event_tabs[3]:
     st.markdown('### LLM coaching report')
     ollama_available = has_ollama()
     huggingface_available = has_huggingface()
-    if not ollama_available and not huggingface_available:
-        st.warning('No LLM provider is configured. Install Ollama locally or set HUGGINGFACE_API_KEY to generate coaching reports.')
+    nvidia_available = has_nvidia()
+    if not ollama_available and not huggingface_available and not nvidia_available:
+        st.warning('No LLM provider is configured. Install Ollama locally, set HUGGINGFACE_API_KEY, or configure NVIDIA_API_KEY and NVIDIA_BASE_URL.')
         st.code('ollama pull llama3')
         st.code('export HUGGINGFACE_API_KEY="your_token_here"')
+        st.code('export NVIDIA_API_KEY="your_nvidia_key"')
+        st.code('export NVIDIA_BASE_URL="https://integrate.api.nvidia.com"')
     # Lightweight Hugging Face connectivity diagnostic
     if st.button('Test Hugging Face connectivity'):
         import socket
@@ -517,8 +520,8 @@ with match_event_tabs[3]:
 
     opponent = st.selectbox('Select opponent to profile', sorted(team_matches['opponent'].unique()))
     if st.button('Generate coaching report'):
-        if not ollama_available and not huggingface_available:
-            st.error('Cannot generate report without Ollama or Hugging Face configured.')
+        if not ollama_available and not huggingface_available and not nvidia_available:
+            st.error('Cannot generate report without Ollama, Hugging Face, or NVIDIA Build configured.')
         else:
             prompt = build_coaching_report_prompt(
                 team=selected_team,
