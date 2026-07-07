@@ -229,7 +229,7 @@ def build_team_match_summary(team_matches: pd.DataFrame, summary: dict) -> dict:
 st.set_page_config(page_title='Football Team Analysis', layout='wide')
 st.title('Football Team Performance & Opponent Profiling')
 st.markdown(
-    'This POC combines raw StatsBomb event data with xGBoost xG modeling, K-Means tactical clustering, and Ollama-powered coaching report generation.'
+    'Football analytics POC with xGBoost xG modeling, K-Means tactical clustering, and multi-provider LLM coaching report generation.'
 )
 
 match_lists = load_match_list_files()
