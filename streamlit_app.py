@@ -9,10 +9,12 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 from mplsoccer import Pitch
+from sklearn.decomposition import PCA
 
 from analytics.xgboost_model import load_xg_model, train_xg_model, summarize_match_xg
 from analytics.tactical_clustering import build_team_profiles, cluster_teams, describe_cluster_centers
-from llm.ollama_report import build_coaching_report_prompt, generate_ollama_report, has_ollama, has_huggingface, has_nvidia
+from analytics.enhanced_metrics import build_team_comparison, calculate_pass_completion, categorize_shot_outcome
+from llm.llm_report import build_coaching_report_prompt, generate_ollama_report, has_ollama, has_huggingface, has_nvidia
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s')
 logger = logging.getLogger(__name__)
@@ -368,15 +370,48 @@ st.dataframe(team_matches[['match_date', 'kick_off', 'venue', 'opponent', 'home_
     'home_score': 'home', 'away_score': 'away', 'match_date': 'date', 'kick_off': 'kickoff'
 }), use_container_width=True)
 
-match_event_tabs = st.tabs(['Match Event Summary', 'Shot Map', 'Tactical Cluster', 'LLM Report'])
+match_event_tabs = st.tabs(['Match Event Summary', 'Shot Map', 'Tactical Cluster', 'Opponent Comparison', 'LLM Report'])
 
 with match_event_tabs[0]:
     st.markdown('### Match event summary')
+    
+    # Basic metrics
     col1, col2, col3, col4 = st.columns(4)
-    col1.metric('Total team events', format_metric(summary.get('total_events', 0)))
+    col1.metric('Total events', format_metric(summary.get('total_events', 0)))
     col2.metric('Passes', format_metric(summary.get('passes', 0)))
-    col3.metric('Pass completion', format_metric(summary.get('pass_completion', 0.0)))
+    col3.metric('Pass completion %', f"{summary.get('pass_completion', 0.0):.1%}")
     col4.metric('Shots', format_metric(summary.get('shots', 0)))
+    
+    # Richer tactical metrics
+    if not team_events.empty:
+        from analytics.enhanced_metrics import (
+            calculate_progressive_passes, calculate_progressive_carries,
+            calculate_turnovers, calculate_attacking_pressures, calculate_final_third_actions
+        )
+        
+        passes = team_events[team_events['type'] == 'Pass']
+        carries = team_events[team_events['type'] == 'Carry']
+        
+        prog_passes = calculate_progressive_passes(passes)
+        prog_carries = calculate_progressive_carries(carries)
+        turnovers = calculate_turnovers(team_events)
+        attacking_pressures = calculate_attacking_pressures(team_events)
+        final_third = calculate_final_third_actions(team_events)
+        
+        st.markdown('#### Progressive & Attacking Actions')
+        col5, col6, col7, col8, col9 = st.columns(5)
+        col5.metric('Progressive passes', prog_passes)
+        col6.metric('Progressive carries', prog_carries)
+        col7.metric('Final 3rd passes', final_third['final_third_passes'])
+        col8.metric('Attacking pressures', attacking_pressures)
+        col9.metric('Turnovers', turnovers['total_turnovers'])
+        
+        st.markdown('#### Defensive Actions')
+        col10, col11, col12, col13 = st.columns(4)
+        col10.metric('Pressures', len(team_events[team_events['type'] == 'Pressure']))
+        col11.metric('Dispossessed', turnovers['dispossessed'])
+        col12.metric('Ball recoveries', len(team_events[team_events['type'] == 'Ball Recovery']))
+        col13.metric('Duels', len(team_events[team_events['type'] == 'Duel']))
 
     if not team_events.empty:
         st.markdown('#### Top event types')
@@ -460,15 +495,124 @@ with match_event_tabs[2]:
     if clustered_profiles.empty:
         st.warning('Not enough event data to compute tactical clusters.')
     else:
-        st.write('Team cluster assignment for the selected season and available matches:')
+        # Create tactical clustering visualization using PCA
+        feature_cols = [c for c in clustered_profiles.columns if c.startswith('evt_')]
+        if feature_cols:
+            pca = PCA(n_components=2)
+            tactical_coords = pca.fit_transform(clustered_profiles[feature_cols])
+            
+            plot_df = pd.DataFrame({
+                'Team': clustered_profiles.index,
+                'PC1': tactical_coords[:, 0],
+                'PC2': tactical_coords[:, 1],
+                'Cluster': clustered_profiles['cluster'].astype(str)
+            })
+            plot_df['Team Label'] = plot_df['Team'] + ' (C' + plot_df['Cluster'] + ')'
+            
+            fig = px.scatter(
+                plot_df,
+                x='PC1',
+                y='PC2',
+                color='Cluster',
+                hover_name='Team Label',
+                title=f'Tactical Cluster Positions (PCA)',
+                labels={
+                    'PC1': f'Tactical Dimension 1 ({pca.explained_variance_ratio_[0]:.1%} variance)',
+                    'PC2': f'Tactical Dimension 2 ({pca.explained_variance_ratio_[1]:.1%} variance)'
+                },
+                color_discrete_sequence=px.colors.qualitative.Bold
+            )
+            
+            # Highlight selected team
+            fig.add_scatter(
+                x=plot_df[plot_df['Team'] == selected_team]['PC1'],
+                y=plot_df[plot_df['Team'] == selected_team]['PC2'],
+                mode='markers',
+                marker=dict(size=20, color='rgba(0,0,0,0)', line=dict(color='red', width=3)),
+                name='Selected Team',
+                hoverinfo='skip'
+            )
+            
+            st.plotly_chart(fig, use_container_width=True)
+        
+        st.write('**Team cluster assignment for the selected season and available matches:**')
         st.write(f'- {selected_team} cluster: {team_cluster_label}')
-        st.write('Cluster center summaries:')
+        st.write('**Cluster center summaries:**')
         for cluster_id, cluster_stats in cluster_desc.items():
             st.markdown(f'**Cluster {cluster_id}**')
             for stat, value in cluster_stats.items():
                 st.write(f'- {stat.replace("evt_", "").replace("_", " ")}: {value:.2%}')
 
 with match_event_tabs[3]:
+    st.markdown('### Opponent Comparison')
+    
+    # Only show opponent comparison for single match view
+    if selected_match_str == "Season Aggregate (All Matches)":
+        st.info('Select a specific match to view opponent comparison.')
+    else:
+        try:
+            opponent_name = selected_match_row['opponent']
+            opponent_events = load_team_events(active_match_ids, opponent_name)
+            
+            if opponent_events.empty:
+                st.warning(f'No event data found for opponent: {opponent_name}')
+            else:
+                # Build comparison table
+                comparison_df = build_team_comparison(team_events, opponent_events, selected_team, opponent_name)
+                
+                st.write(f'**{selected_team} vs {opponent_name}**')
+                st.dataframe(comparison_df, use_container_width=True, hide_index=True)
+                
+                # Additional detailed metrics
+                st.markdown('#### Detailed Metrics')
+                
+                col1, col2 = st.columns(2)
+                
+                with col1:
+                    st.markdown(f'**{selected_team}**')
+                    passes = team_events[team_events['type'] == 'Pass']
+                    pass_stats = calculate_pass_completion(passes)
+                    st.metric('Pass Completion %', f"{pass_stats['completion_pct']:.1%}")
+                    
+                    shots = team_events[team_events['type'] == 'Shot']
+                    shot_stats = categorize_shot_outcome(shots)
+                    st.metric('Shots', shot_stats['total'])
+                    st.metric('On Target', shot_stats['goal'] + shot_stats['saved'])
+                    st.metric('Goals', shot_stats['goal'])
+                
+                with col2:
+                    st.markdown(f'**{opponent_name}**')
+                    opp_passes = opponent_events[opponent_events['type'] == 'Pass']
+                    opp_pass_stats = calculate_pass_completion(opp_passes)
+                    st.metric('Pass Completion %', f"{opp_pass_stats['completion_pct']:.1%}")
+                    
+                    opp_shots = opponent_events[opponent_events['type'] == 'Shot']
+                    opp_shot_stats = categorize_shot_outcome(opp_shots)
+                    st.metric('Shots', opp_shot_stats['total'])
+                    st.metric('On Target', opp_shot_stats['goal'] + opp_shot_stats['saved'])
+                    st.metric('Goals', opp_shot_stats['goal'])
+                
+                # Match insights
+                st.markdown('#### Match Insights')
+                
+                if shot_stats['total'] > 0 and opp_shot_stats['total'] > 0:
+                    st.write(f'**Shooting Efficiency:**')
+                    st.write(f'- {selected_team}: {shot_stats["accuracy_pct"]:.1%} accuracy')
+                    st.write(f'- {opponent_name}: {opp_shot_stats["accuracy_pct"]:.1%} accuracy')
+                
+                if pass_stats['total'] > 0 and opp_pass_stats['total'] > 0:
+                    st.write(f'**Possession Control (via passes):**')
+                    total_passes = pass_stats['completed'] + opp_pass_stats['completed']
+                    if total_passes > 0:
+                        team_share = pass_stats['completed'] / total_passes
+                        st.write(f'- {selected_team}: {team_share:.1%} of completed passes')
+                        st.write(f'- {opponent_name}: {(1 - team_share):.1%} of completed passes')
+        
+        except Exception as e:
+            st.error(f'Error loading opponent comparison: {e}')
+            logger.exception('Opponent comparison error')
+
+with match_event_tabs[4]:
     st.markdown('### LLM coaching report')
     ollama_available = has_ollama()
     huggingface_available = has_huggingface()
@@ -517,6 +661,61 @@ with match_event_tabs[3]:
                         st.error(f'Hugging Face returned {resp.status_code}: {resp.text[:300]}')
                 except requests.exceptions.RequestException as e:
                     st.error(f'Network request to Hugging Face failed: {e}')
+    
+    # NVIDIA Build connectivity diagnostic
+    if st.button('Test NVIDIA Build connectivity'):
+        import socket
+        import requests
+        import os
+        
+        api_key = os.getenv('NVIDIA_API_KEY')
+        base_url = os.getenv('NVIDIA_BASE_URL')
+        
+        # Streamlit secrets fallback
+        try:
+            if not api_key and hasattr(st, 'secrets'):
+                api_key = st.secrets.get('NVIDIA_API_KEY')
+            if not base_url and hasattr(st, 'secrets'):
+                base_url = st.secrets.get('NVIDIA_BASE_URL')
+        except Exception:
+            pass
+        
+        if not api_key or not base_url:
+            st.error('NVIDIA_API_KEY and NVIDIA_BASE_URL must be set in environment or Streamlit secrets.')
+        else:
+            st.info(f'Testing NVIDIA endpoint: {base_url}')
+            try:
+                # Parse hostname from URL
+                from urllib.parse import urlparse
+                parsed = urlparse(base_url)
+                hostname = parsed.hostname or base_url
+                socket.getaddrinfo(hostname, 443)
+                st.success(f'DNS resolution successful for {hostname}')
+            except Exception as e:
+                st.error(f'DNS lookup failed for {base_url}: {e}')
+            else:
+                try:
+                    url = f'{base_url.rstrip("/")}/chat/completions'
+                    headers = {
+                        'Authorization': f'Bearer {api_key}',
+                        'Content-Type': 'application/json',
+                    }
+                    payload = {
+                        'model': 'meta/llama-3.1-8b-instruct',
+                        'messages': [
+                            {'role': 'user', 'content': 'Hello, this is a test.'}
+                        ],
+                        'max_tokens': 10,
+                    }
+                    resp = requests.post(url, headers=headers, json=payload, timeout=30)
+                    if resp.status_code == 200:
+                        st.success('✅ NVIDIA Build connectivity test succeeded (200). Endpoint is working!')
+                    else:
+                        st.error(f'NVIDIA Build returned {resp.status_code}: {resp.text[:300]}')
+                except requests.exceptions.Timeout:
+                    st.error('NVIDIA Build request timed out after 30 seconds.')
+                except requests.exceptions.RequestException as e:
+                    st.error(f'Network request to NVIDIA Build failed: {e}')
 
     opponent = st.selectbox('Select opponent to profile', sorted(team_matches['opponent'].unique()))
     if st.button('Generate coaching report'):

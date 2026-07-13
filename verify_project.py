@@ -10,7 +10,7 @@ from analytics.xgboost_model import (
     train_xg_model,
 )
 from analytics.tactical_clustering import build_team_profiles, cluster_teams
-from llm.ollama_report import build_coaching_report_prompt, has_ollama
+from llm.llm_report import build_coaching_report_prompt, has_ollama
 
 
 def main():
